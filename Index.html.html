@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Clínica Dental - Dra. Xiomara Rodríguez</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9fdfd;
+      color: #333;
+    }
+
+    header {
+      background-color: #00796b;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      margin: 10px 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #a5d6d3;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: #e0f7f4;
+    }
+
+    .hero h2 {
+      font-size: 2.4em;
+      margin-bottom: 10px;
+    }
+
+    .hero .button {
+      background-color: #00796b;
+      color: white;
+      padding: 10px 25px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease;
+    }
+
+    .hero .button:hover {
+      background-color: #004d40;
+    }
+
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .services, .gallery, .contact, #horarios {
+      background-color: #f1fcfb;
+    }
+
+    .service {
+      display: inline-block;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 20px;
+      margin: 10px;
+      width: 250px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .service:hover {
+      transform: translateY(-5px);
+    }
+
+    .gallery-item {
+      max-width: 300px;
+      margin: 10px;
+      display: inline-block;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .map-logo img {
+      width: 150px;
+      margin-top: 15px;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+    }
+
+    .map-logo img:hover {
+      opacity: 0.8;
+    }
+
+    form {
+      background: white;
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 25px;
+      border-radius: 6px;
+      box-shadow: 0 0 10px #ccc;
+      text-align: left;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    form input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1em;
+      box-sizing: border-box;
+    }
+
+    .button {
+      background-color: #00796b;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1.1em;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+      width: 100%;
+    }
+
+    .button:hover {
+      background-color: #004d40;
+    }
+
+    .social-icons img {
+      width: 60px;
+      margin: 0 10px;
+      vertical-align: middle;
+      transition: opacity 0.3s ease;
+      cursor: pointer;
+    }
+
+    .social-icons img:hover {
+      opacity: 0.8;
+    }
+
+    footer {
+      background-color: #00796b;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    #confirmationMessage {
+      color: green;
+      margin-top: 15px;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    #horarios p {
+      font-size: 1.1em;
+      font-weight: bold;
+      color: #00796b;
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Clínica Dental</h1>
+    <p>Dra. Xiomara Rodríguez</p>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#ubicacion">Ubicación</a></li>
+        <li><a href="#horarios">Horarios</a></li>
+        <li><a href="#contacto">Contáctanos</a></li>
+        <li><a href="#programar">Agenda tu Cita</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="inicio" class="hero">
+    <h2>Sonrisas Saludables, Vida Saludable</h2>
+    <p>Tu salud bucal es nuestra prioridad.</p>
+    <a href="#programar" class="button">Agenda tu cita</a>
+  </section>
+
+  <section id="servicios">
+    <h2>Nuestros Servicios</h2>
+    <div class="services">
+      <div class="service">
+        <h3>Ortodoncia</h3>
+        <p>Alineación dental de calidad.</p>
+      </div>
+      <div class="service">
+        <h3>Limpiezas</h3>
+        <p>Cuida tu sonrisa con limpieza profesional.</p>
+      </div>
+      <div class="service">
+        <h3>Blanqueamiento</h3>
+        <p>Haz que tu sonrisa brille.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="galeria">
+    <h2>Galería</h2>
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="sala de espera.jpg" alt="Sala de Espera" />
+        <p>Sala de Espera</p>
+      </div>
+      <div class="gallery-item">
+        <img src="consultorio.jpg" alt="Consultorio" />
+        <p>Consultorio</p>
+      </div>
+      <div class="gallery-item">
+        <img src="titulo 1.jpg" alt="Título Profesional" />
+        <p>Título Profesional</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="ubicacion">
+    <h2>¿Dónde Estamos?</h2>
+    <p><a href="https://maps.app.goo.gl/4Xo1eLYbZ8KA21P16" target="_blank" rel="noopener noreferrer">Ver en Google Maps</a></p>
+    <a href="https://maps.app.goo.gl/4Xo1eLYbZ8KA21P16" target="_blank" rel="noopener noreferrer" class="map-logo" aria-label="Google Maps">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Google_Maps_Logo_2020.svg/2275px-Google_Maps_Logo_2020.svg.png" alt="Google Maps" />
+    </a>
+  </section>
+
+  <section id="horarios">
+    <h2>Horarios de Atención</h2>
+    <p>Lunes a Viernes: 1:00 PM - 5:00 PM</p>
+    <p>Sábados: 9:00 AM - 3:00 PM</p>
+  </section>
+
+  <section id="contacto" class="contact">
+    <h2>Contáctanos</h2>
+    <p>Llámanos: <strong>71606632</strong></p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/share/1AJUdPLCou/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" />
+      </a>
+      <a href="https://www.instagram.com/dra.xiomara_odontologa" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram" />
+      </a>
+      <!-- WhatsApp icon -->
+      <a href="https://wa.me/50371606632" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width:60px; margin: 0 10px; vertical-align: middle; cursor: pointer; transition: opacity 0.3s ease;" />
+      </a>
+    </div>
+  </section>
+
+  <section id="programar">
+    <h2>Agenda tu Cita</h2>
+    <form id="appointmentForm" autocomplete="off">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo" />
+      
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" name="telefono" required placeholder="Ej: 71606632 (sin +503)" pattern="[0-9]{8,15}" title="Ingresa un número válido (8-15 dígitos)" />
+      
+      <label for="fecha">Fecha:</label>
+      <input type="date" id="fecha" name="fecha" required />
+      
+      <label for="hora">Hora:</label>
+      <input type="time" id="hora" name="hora" required min="09:00" max="17:00" step="900" title="Seleccione una hora entre 09:00 y 17:00" />
+      
+      <button type="submit" class="button">Enviar por WhatsApp</button>
+    </form>
+    <p id="confirmationMessage"></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Clínica Dental - Dra. Xiomara Rodríguez</p>
+  </footer>
+
+  <script>
+    // Establecer fecha mínima del input a hoy
+    document.addEventListener('DOMContentLoaded', () => {
+      const fechaInput = document.getElementById('fecha');
+      const hoy = new Date();
+      const yyyy = hoy.getFullYear();
+      const mm = String(hoy.getMonth() + 1).padStart(2, '0');
+      const dd = String(hoy.getDate()).padStart(2, '0');
+      const fechaMin = `${yyyy}-${mm}-${dd}`;
+      fechaInput.min = fechaMin;
+    });
+
+    // Manejar envío del formulario
+    document.getElementById('appointmentForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const nombre = document.getElementById('nombre').value.trim();
+      const telefono = document.getElementById('telefono').value.trim();
+      const fecha = document.getElementById('fecha').value;
+      const hora = document.getElementById('hora').value;
+
+      if (!nombre || !telefono || !fecha || !hora) {
+        alert('Por favor, completa todos los campos.');
+        return;
+      }
+
+      // Aquí se forma el mensaje para WhatsApp
+      const mensaje = `Hola, quiero agendar una cita.\nNombre: ${nombre}\nTeléfono: ${telefono}\nFecha: ${fecha}\nHora: ${hora}`;
+
+      // Número de WhatsApp con código de país sin signos
+      const numeroWhatsApp = '50371606632';
+
+      // URL para abrir chat de WhatsApp directo
+      const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
+
+      // Abrir WhatsApp en nueva pestaña
+      window.open(url, '_blank');
+
+      // Mostrar mensaje de confirmación en la página
+      const confirmation = document.getElementById('confirmationMessage');
+      confirmation.textContent = 'Gracias por enviar tu solicitud. Se abrirá WhatsApp para confirmar la cita.';
+
+      // Opcional: resetear formulario
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
